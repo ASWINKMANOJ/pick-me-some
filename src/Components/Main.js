@@ -1,4 +1,4 @@
-import MovieCarousel from "../Animations/Carousel";
+import MovieCarousel from "../Animations/MovieCarousel";
 
 function Main() {
   return (

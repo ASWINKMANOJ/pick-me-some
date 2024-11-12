@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SwipeCard from "../Components/SwipeCard";
-import { movies } from "../Data/MovieData";
 import Loading from "../Components/Loading";
 
 const PickMovie = () => {
@@ -30,8 +29,7 @@ const PickMovie = () => {
         setLoading(false);
       }
     };
-    // fetchMovieDataWithAxios();
-    setMovieData(movies);
+    fetchMovieDataWithAxios();
   }, [apiToken]);
 
   if (loading) {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SwipeCard from "../Components/SwipeCard";
-import { topRatedTv } from "../Data/MovieData";
 import Loading from "../Components/Loading";
 
 const PickTvShow = () => {
@@ -16,7 +15,7 @@ const PickTvShow = () => {
         const rNumber = Math.floor(Math.random() * 50) + 1;
         const response = await axios({
           method: "GET",
-          url: `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${rNumber}`,
+          url: `https://api.themoviedb.org/3/tv/popular?language=en-US&page=${rNumber}`,
           headers: {
             accept: "application/json",
             Authorization: `Bearer ${apiToken}`,
@@ -30,8 +29,7 @@ const PickTvShow = () => {
         setLoading(false);
       }
     };
-    // fetchMovieDataWithAxios();
-    setMovieData(topRatedTv);
+    fetchMovieDataWithAxios();
   }, [apiToken]);
 
   if (loading) {
