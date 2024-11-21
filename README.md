@@ -61,7 +61,6 @@ The application will be available at `http://localhost:3000`
 
 ## 🔜 Upcoming Features
 
-- User Authentication
 - Personalized recommendations
 - Watchlist management
 - Social sharing features
